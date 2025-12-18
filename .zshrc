@@ -23,3 +23,4 @@ fi
 
 #
 export TERM=xterm-256color
+eval "$(intelli-shell init zsh)"
