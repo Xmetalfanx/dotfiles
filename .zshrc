@@ -11,6 +11,7 @@ plug "zap-zsh/fzf"
 autoload -Uz compinit
 compinit
 
+export TERM=xterm-256color
 
 
 # Aliases
@@ -21,6 +22,4 @@ if [ -f ${zsh_aliases} ]; then
 fi
 
 
-#
-export TERM=xterm-256color
 eval "$(intelli-shell init zsh)"
