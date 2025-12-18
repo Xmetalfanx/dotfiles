@@ -20,6 +20,8 @@ compinit
 
 export TERM=xterm-256color
 
+# Homebrew & other PATH-modifying tools (make sure they append, not overwrite)
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Aliases
 zsh_aliases="/home/$USER/.config/zsh/zsh_aliases.zsh"
