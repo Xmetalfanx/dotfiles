@@ -12,13 +12,13 @@ autoload -Uz compinit
 compinit
 
 
-# Aliases 
-alias bfg="java -jar /home/$USER/Downloads/bfg-1.14.0.jar"
 
-alias grep="grep --color=auto"
-
-alias pkill="sudo pkill -9"
-alias mkdir="mkdir -pv"
+# Aliases
+zsh_aliases="/home/$USER/.config/zsh/zsh_aliases.zsh"
+if [ -f ${zsh_aliases} ]; then
+  echo "Loading zsh aliases"
+  source ${zsh_aliases}
+fi
 
 
 #
