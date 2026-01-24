@@ -15,3 +15,7 @@ node_modules
 
 #!.yarn/cache
 .pnp.*
+
+# Atuin install / runtime artifacts
+atuin-receipt.json
+atuin.json
