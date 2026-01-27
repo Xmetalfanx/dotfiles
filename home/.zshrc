@@ -25,9 +25,9 @@ export TERM=xterm-256color
 
 # Homebrew & other PATH-modifying tools (make sure they append, not overwrite)
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# for zoxide 
 eval "$(zoxide init zsh)"
-. "$HOME/.atuin/bin/env"
-eval "$(atuin init zsh)"
 
 # Aliases
 zsh_aliases="/home/$USER/.config/zsh/zsh_aliases.zsh"
@@ -42,3 +42,5 @@ eval "$(intelli-shell init zsh)"
 # for starship
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
+
+eval "$(atuin init zsh)"
