@@ -29,6 +29,12 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # for zoxide 
 eval "$(zoxide init zsh)"
 
+# for Atuin 
+export PATH="$HOME/.atuin/bin:$PATH"
+
+if command -v atuin >/dev/null 2>&1; then
+  eval "$(atuin init zsh)"
+fi
 #########################################################################
 ## Function to load alias files 
 
@@ -60,4 +66,5 @@ eval "$(intelli-shell init zsh)"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 
-eval "$(atuin init zsh)"
+. "$HOME/.atuin/bin/env"
+
