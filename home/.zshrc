@@ -29,12 +29,29 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # for zoxide 
 eval "$(zoxide init zsh)"
 
+#########################################################################
+## Function to load alias files 
+
+load_alias_file() {
+  local file="$1"
+  local description="$2"
+
+  if [[ -f "$file" ]]; then
+    echo "Loading $description - $file"
+    source "$file"
+  else
+    echo "Could not load $description - $file"
+  fi
+}
+
+## End of function 
+#################################################################
+
+
 # Aliases
 zsh_aliases="/home/$USER/.config/zsh/zsh_aliases.zsh"
-if [ -f ${zsh_aliases} ]; then
-  echo "Loading zsh aliases"
-  source ${zsh_aliases}
-fi
+
+load_alias_file "$zsh_aliases"
 
 # for intelli-shell
 eval "$(intelli-shell init zsh)"
