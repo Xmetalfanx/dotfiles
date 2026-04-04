@@ -68,3 +68,11 @@ eval "$(starship init zsh)"
 
 . "$HOME/.atuin/bin/env"
 
+# # for nix
+# if [[ -n "$IN_NIX_SHELL" ]]; then
+#   NIX_INDICATOR="%F{green}[nix-shell]%f "
+# else
+#   NIX_INDICATOR=""
+# fi
+
+# PROMPT="${NIX_INDICATOR}%~ %# "
