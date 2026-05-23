@@ -64,3 +64,12 @@ alias fmt="file --mime-type"
 alias fshort="file -b"
 alias fmts="file --mime-type -b"
 
+#######################################################
+# Git related
+
+## git add branch/delete branch
+alias gab="git branch"
+alias gdb="git branch -D"
+
+alias gawt="git worktree add"
+alias gdwt="git worktree remove"
