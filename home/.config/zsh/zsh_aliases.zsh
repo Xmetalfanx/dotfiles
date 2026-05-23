@@ -35,7 +35,7 @@ alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true 
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
 
 # Convert all audio/video files in pwd to mp3 at 256kbps
-alias tomp3='setopt localoptions null_glob; for f in *.{mp4,mkv,webm,flv,avi,wmv,mov,ogg,wav,flac,aac,m4a}; do [ -e "$f" ] && ffmpeg -i "$f" -vn -ab 256k -ar 44100 -y "${f%.*}.mp3"; done'
+alias tomp3='setopt localoptions null_glob; for f in *.{mp4,mkv,webm,flv,avi,wmv,mov,ogg,wav,flac,aac,m4a,opus}; do [ -e "$f" ] && ffmpeg -i "$f" -vn -ab 256k -ar 44100 -y "${f%.*}.mp3"; done'
 
 # for Fuzzy Find
 alias fp='fzf --layout reverse --preview "bat --color=always {}"'
@@ -63,3 +63,4 @@ alias astro_upgrade="yarn dlx @astrojs/upgrade"
 alias fmt="file --mime-type"
 alias fshort="file -b"
 alias fmts="file --mime-type -b"
+
