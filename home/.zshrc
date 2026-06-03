@@ -29,15 +29,15 @@ export TERM=xterm-256color
 # Homebrew & other PATH-modifying tools (make sure they append, not overwrite)
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# for zoxide 
+# for zoxide
 eval "$(zoxide init zsh)"
 
-# for Atuin 
+# for Atuin
 if command -v atuin >/dev/null 2>&1; then
   eval "$(atuin init zsh)"
 fi
 #########################################################################
-## Function to load alias files 
+## Function to load alias files
 
 load_alias_file() {
   local file="$1"
@@ -51,7 +51,7 @@ load_alias_file() {
   fi
 }
 
-## End of function 
+## End of function
 #################################################################
 
 
