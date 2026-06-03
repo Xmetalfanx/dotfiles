@@ -77,3 +77,49 @@ eval "$(starship init zsh)"
 # fi
 
 # PROMPT="${NIX_INDICATOR}%~ %# "
+######################################################
+# for atuin
+atd_5hr() {
+  echo "Entries to be removed:"
+  atuin search '.*' --before "5 hour ago"
+
+  echo "Deleting..."
+  atuin search --delete '.*' --before "5 hour ago" || true
+}
+
+
+atd_12hr() {
+  echo "Entries to be removed:"
+  atuin search '.*' --before "12 hour ago"
+
+  echo "Deleting..."
+  atuin search --delete '.*' --before "12 hour ago" || true
+}
+
+atd_day() {
+  echo "Entries to be removed:"
+  atuin search '.*' --before "1 days ago"
+
+  echo "Deleting..."
+  atuin search --delete '.*' --before "1 days ago" || true
+}
+
+atdw() {
+  echo "Entries to be removed:"
+  atuin search '.*' --before "7 days ago"
+
+  echo "Deleting..."
+  atuin search --delete '.*' --before "7 days ago" || true
+}
+
+
+atdm() {
+  echo "Entries to be removed:"
+  atuin search '.*' --before "30 days ago"
+
+  echo "Deleting..."
+  atuin search --delete '.*' --before "30 days ago" || true
+}
+
+# End For Atuin
+#####################################################
