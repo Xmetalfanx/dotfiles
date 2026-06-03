@@ -1,3 +1,6 @@
+# for nix package manager and allowing unfree apps like xnviewmp
+export NIXPKGS_ALLOW_UNFREE=1
+
 # --- pyenv setup ---
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
