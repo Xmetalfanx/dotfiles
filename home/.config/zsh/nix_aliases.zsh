@@ -1,13 +1,23 @@
-alias nix_search="nix-env -qaP"
-alias nix_install="nix-env -iA nixpkgs."
+nix_search() {
+    nix search nixpkgs "$1"
+}
 
-# should i change this to uninstall?  make a duplicate?
-alias nix_remove="nix-env -e"
-alias nix_uninstall="nix-env -e"
+nix_add() {
+    nix profile add "nixpkgs#$1" --impure
+}
 
-# upgrade a package
-alias nix_upgrade="nix-env -uA nixpkgs."
+nix_upgrade() {
+    nix profile upgrade "$1"
+}
 
-# upgrade all package
-# ## doesn't need an arguments
-alias nix_upgrade_all="nix-env -u"
+nix_remove() {
+    nix profile remove "$1"
+}
+
+nix_list() {
+    nix profile list
+}
+
+nix_cleanup() {
+	nix-store --gc
+}
