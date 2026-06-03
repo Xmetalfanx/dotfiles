@@ -2,10 +2,10 @@
 export NIXPKGS_ALLOW_UNFREE=1
 
 # --- pyenv setup ---
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 # --- end pyenv setup ---
 
 # Created by Zap installer
