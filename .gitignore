@@ -19,3 +19,6 @@ node_modules
 # Atuin install / runtime artifacts
 atuin-receipt.json
 atuin.json
+
+# for weechat 
+home/.config/weechat/sec.conf
