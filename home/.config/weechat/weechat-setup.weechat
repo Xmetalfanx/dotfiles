@@ -1,0 +1,105 @@
+# =========================
+# BASIC / GENERAL
+# =========================
+
+/alias add me /me $1-
+/alias add ame /allchan /me $1-
+/alias add anick /allserv /nick $1-
+/alias add amsg /allchan /say $1-
+
+/alias add j /join $1
+/alias add leave /part $1
+/alias add exit /quit
+
+/alias add m /msg $1 $2-
+/alias add dmsg /msg =$1 $2-
+/alias add query /query $1
+
+/alias add chat /dcc chat $1
+
+# =========================
+# INFO / UTILITY
+# =========================
+
+/alias add grep /lastlog -r -- $1-
+/alias add raw /quote $1-
+/alias add servhelp /quote HELP
+/alias add sping /ping
+
+/alias add uptime /quote STATS u
+/alias add sv /echo WeeChat $version
+
+# =========================
+# MODES / IRC OPS
+# =========================
+
+/alias add banlist /quote MODE $channel +b
+/alias add umode /mode $nick $1-
+
+/alias add kill /quote KILL $1 :$2-
+/alias add wallops /quote WALLOPS :$1-
+
+/alias add squery /quote SQUERY $1 :$2-
+
+# =========================
+# MESSAGING SHORTCUTS
+# =========================
+
+/alias add omsg /msg @$channel $1-
+/alias add onotice /notice @$channel $1-
+
+/alias add ver /ctcp $1 VERSION
+/alias add version /ctcp $1 VERSION
+
+# =========================
+# WHOIS
+# =========================
+
+/alias add wi /whois $1
+/alias add wii /whois $1 $1
+
+# =========================
+# IGNORE
+# =========================
+
+/alias add ignall /ignore add $1!*@* *
+
+# =========================
+# SERVER
+# =========================
+
+/alias add sslserver /server add temp $1 -ssl
+
+# =========================
+# CHANSERV / OP TOOLS
+# =========================
+
+/alias add al /msg chanserv akick $channel list
+/alias add ak /msg chanserv akick $channel add $1 !T $2-
+/alias add ad /msg chanserv akick $channel del $1
+
+# linuxmint specific
+/alias add ala /msg chanserv akick #linuxmint-help list
+/alias add ala2 /msg chanserv akick #linuxmint-chat list
+
+/alias add aka /msg chanserv akick #linuxmint-help add $1 !T $2-
+/alias add aka2 /msg chanserv akick #linuxmint-chat add $1 !T $2-
+
+/alias add ada /msg chanserv akick #linuxmint-help del $1
+/alias add ada2 /msg chanserv akick #linuxmint-chat del $1
+
+# op / deop
+/alias add opon /msg chanserv op #linuxmint-chat
+/alias add opon2 /msg chanserv op #linuxmint-help
+/alias add oponmint /msg chanserv op #mintops
+
+/alias add opoff /msg chanserv deop #linuxmint-chat
+/alias add opoff2 /msg chanserv deop #linuxmint-help
+/alias add opoffmint /msg chanserv deop #mintops
+
+# =========================
+# MUTE (ban mask shortcut)
+# =========================
+
+/alias add mutechat /mode #linuxmint-chat +b m:$1
+/alias add mutehelp /mode #linuxmint-help +b m:$1
