@@ -33,8 +33,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
 
 # for Atuin 
-export PATH="$HOME/.atuin/bin:$PATH"
-
 if command -v atuin >/dev/null 2>&1; then
   eval "$(atuin init zsh)"
 fi
