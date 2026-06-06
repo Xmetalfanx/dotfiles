@@ -1,31 +1,21 @@
-#######################################################################
-## Variables for alias files 
+typeset -A alias_files
 
-zsh_config_dir="$HOME/.config/zsh"
+alias_files=(
+    atuin   "zsh atuin aliases"
+    docker  "zsh docker aliases"
+    dust    "zsh dust aliases"
+    git     "zsh git aliases"
+    list    "zsh listing aliases"
+    misc    "zsh misc aliases"
+    nix     "zsh nix package manager aliases"
+    yt      "zsh yt aliases"
+)
 
-
-atuin_aliases="$zsh_config_dir/atuin_aliases.zsh"
-docker_aliases="$zsh_config_dir/docker_aliases.zsh"
-dust_aliases="$zsh_config_dir/dust_aliases.zsh"
-git_aliases="$zsh_config_dir/git_aliases.zsh"
-list_aliases="$zsh_config_dir/list_aliases.zsh"
-misc_aliases="$zsh_config_dir/misc_aliases.zsh"
-nix_aliases="$zsh_config_dir/nix_aliases.zsh"
-yt_aliases="$zsh_config_dir/yt_aliases.zsh"
-
-## End of Variables for alias files
-#########################################################################
-
-## Loads the alias files
-load_alias_file "$atuin_aliases" "zsh atuin aliases"
-load_alias_file "$docker_aliases" "zsh docker aliases"
-load_alias_file "$dust_aliases" "zsh dust aliases"
-load_alias_file "$git_aliases" "zsh git aliases"
-load_alias_file "$list_aliases" "zsh listing aliases"
-load_alias_file "$nix_aliases" "zsh nix package manager aliases"
-load_alias_file "$yt_aliases" "zsh yt aliases"
-
-
+for file desc in ${(kv)alias_files}; do
+    load_alias_file \
+        "$zsh_config_dir/${file}_aliases.zsh" \
+        "$desc"
+done
 
 ###############################################################################
 # Other aliases
