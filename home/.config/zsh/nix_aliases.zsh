@@ -21,3 +21,11 @@ nix_list() {
 nix_cleanup() {
 	nix-store --gc
 }
+
+nix_wipe_history1() {
+	nix profile wipe-history
+}
+
+nix_wipe_history2() {
+	nix-collect-garbage -d
+}
