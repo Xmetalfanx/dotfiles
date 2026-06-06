@@ -1,12 +1,12 @@
 ##################################################################
-# Aliases for eza 
+# Aliases for eza
 
 # Directory listing with icons, directories first
 alias ls='eza --icons --group-directories-first'
 
 # Directory-only listing with icons
-# note to self: lsdirs because if i want to also play with "lsd" (ls/eza like command), 
-    # "lsd" for the name here presents a problem 
+# note to self: lsdirs because if i want to also play with "lsd" (ls/eza like command),
+    # "lsd" for the name here presents a problem
 alias lsdirs='eza --icons --group-directories-first -D'
 alias directory='eza --icons --group-directories-first -D'
 
@@ -33,20 +33,20 @@ alias lsmint='eza -lT --icons --no-permissions --no-filesize --no-time --no-user
 # normal lsd
 alias lsd="lsd --group-dirs=first"
 
-# lsd tree view 
-# for now i am not putting a depth limit on this 
+# lsd tree view
+# for now i am not putting a depth limit on this
 alias lsd_t="lsd --group-dirs=first --tree"
 
-# lsd long view 
+# lsd long view
 alias lsd_a="lsd --group-dirs=first -a"
 
 
-# -l: list mode 
+# -l: list mode
 # -h: human readable (size formats)
 # these are list view but only have slected columns
 
 alias lsd_list="lsd --group-dirs=first -lh --blocks name,size"
-# same as above but tree view too 
+# same as above but tree view too
 # picked 4 levels deep randomly
 alias lsd_list_tree="lsd --group-dirs=first -lh --tree --blocks name,size --depth 4"
 
