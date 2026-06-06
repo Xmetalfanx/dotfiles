@@ -13,10 +13,6 @@ plug "zap-zsh/fzf"
 # "Fix" for bat issue (related to the way zsh completion is handled i think)
 fpath=(~/.zsh/completions $fpath)
 
-# Load and initialise completion system
-autoload -Uz compinit
-compinit
-
 export TERM=xterm-256color
 
 # Homebrew & other PATH-modifying tools (make sure they append, not overwrite)
