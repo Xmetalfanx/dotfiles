@@ -13,7 +13,7 @@ alias_files=(
 
 for file desc in ${(kv)alias_files}; do
     load_alias_file \
-        "$zsh_config_dir/${file}_aliases.zsh" \
+        "$zsh_config_dir/aliases_and_functions/${file}_aliases.zsh" \
         "$desc"
 done
 
