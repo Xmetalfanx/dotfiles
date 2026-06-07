@@ -44,9 +44,6 @@ load_alias_file "$zsh_aliases"
 # for intelli-shell
 eval "$(intelli-shell init zsh)"
 
-# for starship
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-eval "$(starship init zsh)"
 
 
 
