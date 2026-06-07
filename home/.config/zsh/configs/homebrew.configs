@@ -1,0 +1,2 @@
+# Homebrew & other PATH-modifying tools (make sure they append, not overwrite)
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
