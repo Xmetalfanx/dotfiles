@@ -1,0 +1,2 @@
+# "Fix" for bat issue (related to the way zsh completion is handled i think)
+fpath=(~/.zsh/completions $fpath)

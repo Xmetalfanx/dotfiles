@@ -10,8 +10,6 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/sudo"
 plug "zap-zsh/fzf"
 
-# "Fix" for bat issue (related to the way zsh completion is handled i think)
-fpath=(~/.zsh/completions $fpath)
 
 export TERM=xterm-256color
 
