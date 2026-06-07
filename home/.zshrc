@@ -13,10 +13,6 @@ export TERM=xterm-256color
 
 
 
-# for Atuin
-if command -v atuin >/dev/null 2>&1; then
-  eval "$(atuin init zsh)"
-fi
 #########################################################################
 ## Function to load alias files
 
