@@ -41,8 +41,6 @@ zsh_aliases="/home/$USER/.config/zsh/zsh_aliases.zsh"
 
 load_alias_file "$zsh_aliases"
 
-# for intelli-shell
-eval "$(intelli-shell init zsh)"
 
 
 

@@ -1,0 +1,2 @@
+# for intelli-shell
+eval "$(intelli-shell init zsh)"
