@@ -12,8 +12,6 @@ plug "zap-zsh/fzf"
 export TERM=xterm-256color
 
 
-# for zoxide
-eval "$(zoxide init zsh)"
 
 # for Atuin
 if command -v atuin >/dev/null 2>&1; then
