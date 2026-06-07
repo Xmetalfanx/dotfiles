@@ -30,25 +30,12 @@ load_alias_file() {
 zsh_config_dir="/home/$USER/.config/zsh"
 zsh_aliases_dir="$zsh_config_dir/aliases_and_functions"
 
-
 # Aliases
 zsh_aliases="$zsh_aliases_dir/zsh_aliases.zsh"
 
 
 echo -e "\nLoading Aliases"
 load_alias_file "$zsh_aliases"
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #################################################################
