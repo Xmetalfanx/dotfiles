@@ -66,5 +66,14 @@ load_alias_file "$zsh_aliases"
 
 
 
+echo -e "\nLoading Custom Config files"
 
+# load_custom_configs "Pyenv" "pyenv"
+load_custom_configs "Fix for bat command problem," "bat_problem_fix"
+load_custom_configs "nix - allow unfree package installs" "nix_allow_unfree"
+load_custom_configs "Zoxide" "zoxide"
+load_custom_configs "Homebrew" "homebrew"
+load_custom_configs "Starship" "starship"
+load_custom_configs "Intelli-shell" "intelli_shell"
+#load_custom_configs "Nix package manager, custom prompt" "nix_prompt"
 
