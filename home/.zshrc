@@ -4,17 +4,6 @@
 # function to load custom config files
 load_custom_configs() {
   zsh_custom_configs="$zsh_config_dir/configs"
-# Created by Zap installer
-[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
-plug "zsh-users/zsh-autosuggestions"
-plug "zap-zsh/supercharge"
-plug "zap-zsh/zap-prompt"
-plug "zsh-users/zsh-syntax-highlighting"
-plug "zap-zsh/sudo"
-plug "zap-zsh/fzf"
-
-
-export TERM=xterm-256color
 
   local purpose=$1
   local config_file=$2
@@ -24,9 +13,7 @@ export TERM=xterm-256color
   . $full_config_file
 }
 
-#########################################################################
-## Function to load alias files
-
+# function to load alias files
 load_alias_file() {
   local file="$1"
   local description="$2"
@@ -38,9 +25,8 @@ load_alias_file() {
     echo "Could not load $description - $file"
   fi
 }
+##############################################################
 
-## End of function
-#################################################################
 
 
 # Aliases
@@ -63,8 +49,18 @@ load_alias_file "$zsh_aliases"
 
 
 
+#################################################################
+# Created by Zap installer
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+plug "zsh-users/zsh-autosuggestions"
+plug "zap-zsh/supercharge"
+plug "zap-zsh/zap-prompt"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "zap-zsh/sudo"
+plug "zap-zsh/fzf"
 
 
+##################################################################
 
 echo -e "\nLoading Custom Config files"
 
@@ -77,3 +73,4 @@ load_custom_configs "Starship" "starship"
 load_custom_configs "Intelli-shell" "intelli_shell"
 #load_custom_configs "Nix package manager, custom prompt" "nix_prompt"
 
+export TERM=xterm-256color
