@@ -6,6 +6,7 @@ alias_files=(
     dust    "zsh dust aliases"
     git     "zsh git aliases"
     list    "zsh listing aliases"
+	micro   "zsh micro editor aliases"
     misc    "zsh misc aliases"
     nix     "zsh nix package manager aliases"
     yt      "zsh yt aliases"

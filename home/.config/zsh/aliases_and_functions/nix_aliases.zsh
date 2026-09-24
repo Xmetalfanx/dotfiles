@@ -6,8 +6,13 @@ nix_add() {
     nix profile add "nixpkgs#$1" --impure
 }
 
-nix_upgrade() {
+nix_upgrade_package() {
+	echo "this is supposed to be used with a package name after"
     nix profile upgrade "$1"
+}
+
+nix_upgrade_all() {
+	nix profile upgrade --all
 }
 
 nix_remove() {
