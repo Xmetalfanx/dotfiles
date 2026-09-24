@@ -1,0 +1,27 @@
+# I think i should put the plugins loading lines here but MAYBE not the first line?
+
+
+#################################################################
+# Created by Zap installer
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+
+#################################################################
+
+# from zap-zsh, repo 
+plug "zap-zsh/supercharge"
+plug "zap-zsh/zap-prompt"
+plug "zap-zsh/sudo"
+plug "zap-zsh/fzf"
+plug "zap-zsh/web-search"
+
+# from zap-users, repo
+plug "zsh-users/zsh-autosuggestions"
+plug "zsh-users/zsh-syntax-highlighting"
+plug "zsh-users/zsh-history-substring-search"
+
+
+# ref: https://github.com/MichaelAquilina/zsh-you-should-use
+plug "MichaelAquilina/zsh-you-should-use"
+
+plug "wintermi/zsh-brew"
+
