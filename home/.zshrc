@@ -51,3 +51,6 @@ load_custom_configs "Intelli-shell" "intelli_shell"
 #load_custom_configs "Nix package manager, custom prompt" "nix_prompt"
 
 export TERM=xterm-256color
+# for Suvadu
+# ref: https://github.com/AppachiTech/suvadu
+eval "$(suv init zsh)"
