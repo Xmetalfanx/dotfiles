@@ -5,5 +5,5 @@
 alias gab="git branch"
 alias gdb="git branch -D"
 
-alias gawt="git worktree add"
-alias gdwt="git worktree remove"
+alias gwta="git worktree add"
+alias gwtd="git worktree remove"
