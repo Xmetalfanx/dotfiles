@@ -9,6 +9,7 @@ alias_files=(
 	micro   "zsh micro editor aliases"
     misc    "zsh misc aliases"
     nix     "zsh nix package manager aliases"
+    suvadu  "zsh suvadu aliases"
     yt      "zsh yt aliases"
 )
 
