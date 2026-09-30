@@ -1,46 +1,37 @@
 
 ######################################################
 # for atuin
-atd_5hr() {
-  echo "Entries to be removed:"
-  ats '.*' --before "5 hour ago"
 
-  echo "Deleting..."
-  atsd '.*' --before "5 hour ago" || true
-}
+atd_delete() {
+  local duration="$1"
+  echo -e "Deleting entries before $duration ..."
 
+  atsd  --before "${duration}" 'curl'|| true
+  atsd  --before "${duration}" 'clear' || true
+  atsd  --before "${duration}" 'yt-dlp' || true
+  atsd  --before "${duration}" 'am' || true
+  atsd  --before "${duration}" 'apt' || true
+  atsd  --before "${duration}" 'brew' || true
+  atsd  --before "${duration}" 'zshreset' || true
+  atsd  --before "${duration}" 'file' || true
+  atsd  --before "${duration}" 'cd' || true
+  atsd  --before "${duration}" 'ats' || true
+  atsd  --before "${duration}" 'atuin search' || true
 
-atd_12hr() {
-  echo "Entries to be removed:"
-  ats '.*' --before "12 hour ago"
+  atuin history dedup --dry-run --before "${duration}" --dupkeep 1
 
-  echo "Deleting..."
-  atsd '.*' --before "12 hour ago" || true
 }
 
 atd_day() {
-  echo "Entries to be removed:"
-  ats '.*' --before "1 days ago"
-
-  echo "Deleting..."
-  atsd '.*' --before "1 days ago" || true
+  atd_delete "1 days ago"
 }
 
-atdw() {
-  echo "Entries to be removed:"
-  ats '.*' --before "7 days ago"
-
-  echo "Deleting..."
-  atsd '.*' --before "7 days ago" || true
+atd_week() {
+  atd_delete "7 days ago"
 }
 
-
-atdm() {
-  echo "Entries to be removed:"
-  ats '.*' --before "30 days ago"
-
-  echo "Deleting..."
-  atsd '.*' --before "30 days ago" || true
+atd_month() {
+  atd_delete "30 days ago"
 }
 
 # End For Atuin
