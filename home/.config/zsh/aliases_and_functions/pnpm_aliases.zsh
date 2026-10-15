@@ -26,7 +26,7 @@ alias pn_remove="pnpm remove"
 
 # If a custom virtualStoreDir or globalVirtualStoreDir is configured and it resides inside the project root (but outside node_modules), it is also removed.
 
-alias pn_cleanup="pnpm cleanup"
+alias pn_clean="pnpm clean"
 
 
 # ref: https://pnpm.io/cli/prune
