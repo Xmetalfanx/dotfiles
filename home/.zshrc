@@ -53,4 +53,4 @@ load_custom_configs "Nix package manager, custom prompt" "nix_prompt"
 load_custom_configs "Atuin" "atuin"
 load_custom_configs "Halloy" "halloy"
 # load_custom_configs "Suvadu" "suvadu"
-
+load_custom_configs "PNPM" "pnpm"
