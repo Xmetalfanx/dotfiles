@@ -1,5 +1,8 @@
 alias pn="pnpm"
 
+alias pn_install="pnpm install"
+alias pn_import="pnpm import"
+
 # add a package
 alias pn_add="pnpm add"
 alias pn_add_dev="pnpm add -D"
