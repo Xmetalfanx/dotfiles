@@ -1,0 +1,2 @@
+# for halloy, irc client 
+[ -f ~/.config/secrets/irc.env ] && source ~/.config/secrets/irc.env

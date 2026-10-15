@@ -37,6 +37,7 @@ zsh_aliases="$zsh_aliases_dir/zsh_aliases.zsh"
 echo -e "\nLoading Aliases"
 load_alias_file "$zsh_aliases"
 
+export TERM=xterm-256color
 
 echo -e "\nLoading Custom Config files"
 
@@ -48,9 +49,8 @@ load_custom_configs "Zoxide" "zoxide"
 load_custom_configs "Homebrew" "homebrew"
 load_custom_configs "Starship" "starship"
 load_custom_configs "Intelli-shell" "intelli_shell"
-#load_custom_configs "Nix package manager, custom prompt" "nix_prompt"
+load_custom_configs "Nix package manager, custom prompt" "nix_prompt"
+load_custom_configs "Atuin" "atuin"
+load_custom_configs "Halloy" "halloy"
+# load_custom_configs "Suvadu" "suvadu"
 
-export TERM=xterm-256color
-# for Suvadu
-# ref: https://github.com/AppachiTech/suvadu
-eval "$(suv init zsh)"

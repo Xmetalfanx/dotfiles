@@ -1,0 +1,3 @@
+# # for Suvadu
+# # ref: https://github.com/AppachiTech/suvadu
+# eval "$(suv init zsh)"
