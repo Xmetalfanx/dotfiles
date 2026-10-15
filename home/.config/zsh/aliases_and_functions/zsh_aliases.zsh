@@ -9,6 +9,7 @@ alias_files=(
 	micro   "zsh micro editor aliases"
     misc    "zsh misc aliases"
     nix     "zsh nix package manager aliases"
+    pnpm    "zzh pnpm aliases"
     suvadu  "zsh suvadu aliases"
     yt      "zsh yt aliases"
 )
@@ -32,7 +33,6 @@ alias zshreset="source ~/.zshrc"
 # for Fuzzy Find
 alias fp='fzf --layout reverse --preview "bat --color=always {}"'
 alias fzf='fzf --layout reverse'
-
 
 # for files command
 alias file_mt="file --mime-type"
