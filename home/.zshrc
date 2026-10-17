@@ -54,3 +54,7 @@ load_custom_configs "Atuin" "atuin"
 load_custom_configs "Halloy" "halloy"
 # load_custom_configs "Suvadu" "suvadu"
 load_custom_configs "PNPM" "pnpm"
+
+
+# Vite+ bin (https://viteplus.dev)
+. "/home/xmetal/.config/vite-plus/env"
