@@ -42,6 +42,7 @@ export TERM=xterm-256color
 echo -e "\nLoading Custom Config files"
 
 # load_custom_configs "Pyenv" "pyenv"
+## terminal related configs
 load_custom_configs "Fix for bat command problem," "bat_problem_fix"
 load_custom_configs "Zap zsh Plugin Manager configs" "zap"
 load_custom_configs "nix - allow unfree package installs" "nix_allow_unfree"
@@ -50,10 +51,15 @@ load_custom_configs "Homebrew" "homebrew"
 load_custom_configs "Starship" "starship"
 load_custom_configs "Intelli-shell" "intelli_shell"
 load_custom_configs "Nix package manager, custom prompt" "nix_prompt"
-load_custom_configs "Atuin" "atuin"
+
+
 load_custom_configs "Halloy" "halloy"
-# load_custom_configs "Suvadu" "suvadu"
 load_custom_configs "PNPM" "pnpm"
+
+## shell history configs
+load_custom_configs "Atuin" "atuin"
+# load_custom_configs "Suvadu" "suvadu"
+
 
 
 # Vite+ bin (https://viteplus.dev)
