@@ -9,8 +9,12 @@ load_custom_configs() {
   local config_file=$2
   local full_config_file="${zsh_custom_configs}/${config_file}.configs"
 
-  echo -e "Loading $purpose config file:   ${full_config_file}"
-  . $full_config_file
+  if [ -f "${full_config_file}" ]; then 
+    echo -e "Loading $purpose config file: ${full_config_file}"
+    . $full_config_file
+  else 
+    echo -e "${full_config_file} not found"
+  fi 
 }
 
 # function to load alias files
