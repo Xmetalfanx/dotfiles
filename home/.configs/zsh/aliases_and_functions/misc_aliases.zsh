@@ -9,3 +9,24 @@ alias astro_upgrade="yarn dlx @astrojs/upgrade"
 
 # to fix vscode freezing
 alias fixcode="sudo pkill -9 code && sudo pkill -9 gnome-keyring && code"
+
+
+###############################################################################
+# Other aliases
+
+alias grep="grep --color=auto"
+alias pkill9="sudo pkill -9"
+alias kill9="sudo kill -9"
+alias mkdir="mkdir -pv"
+
+alias zshreset="source ~/.zshrc"
+
+# for Fuzzy Find
+alias fp='fzf --layout reverse --preview "bat --color=always {}"'
+alias fzf='fzf --layout reverse'
+
+# for files command
+alias file_mt="file --mime-type"
+alias file_short="file -b"
+alias file_mts="file --mime-type -b"
+

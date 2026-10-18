@@ -8,6 +8,6 @@ alias atsd='ats --delete'
 
 #######################################################
 
-# loading the functions
-echo "Loading Atuin functions"
-. $zsh_aliases_dir/atuin_functions.zsh
+# # loading the functions
+# echo "Loading Atuin functions"
+# . $zsh_aliases_dir/atuin_functions.zsh

@@ -7,6 +7,8 @@ alias suvh='suv history'
 # this works ... use as a template
 ## suv delete "^lazygit$" --regex
 
-# loading the functions
-echo "Loading suvadu functions"
-. $zsh_aliases_dir/suvadu_functions.zsh
+
+##############################################
+# # loading the functions
+# echo "Loading suvadu functions"
+# . $zsh_aliases_dir/suvadu_functions.zsh

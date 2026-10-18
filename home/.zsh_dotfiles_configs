@@ -1,0 +1,66 @@
+# this file is to clean up .zshrc and is custom named by myself
+
+##############################################################
+## Functions
+
+declare_variables() {
+
+    dotfiles_home_dir="$HOME/dotfiles/home"
+
+    main_zsh_dir="${dotfiles_home_dir}/.configs/zsh"
+
+    # for aliases
+    zsh_aliases_dir="$main_zsh_dir/aliases_and_functions"
+    zsh_config_dir="$main_zsh_dir/configs"
+
+    # what to call to load aliases
+    main_zsh_aliases_file="$zsh_aliases_dir/load_aliases.cfg"
+
+}
+
+# NOTE: do not unset ALL variables here
+unset_temp_variables() {
+  # echo -e "Unsetting various variables: pretty_name config_basename full_config_filepath"
+
+  unset pretty_name config_basename full_config_filepath
+}
+
+validate_and_load_config_file() {
+  
+  full_config_filepath="${zsh_config_dir}/${config_basename}.configs"
+
+  if [ -f "${full_config_filepath}" ]; then
+    echo -e "Loading $pretty_name config file: ${full_config_filepath}"
+
+    # load file, if valid
+    . $full_config_filepath
+  else
+    echo -e "ERROR: config file for ${pretty_name}, ${full_config_filepath}, not found"
+  fi
+
+  unset_temp_variables
+}
+
+# function to load custom config files
+load_configs() {
+
+  pretty_name=$1
+  # this is the clean, "basic" name of what i am loading
+  config_basename=$2
+
+  validate_and_load_config_file
+}
+
+
+##############################################################
+# function to load alias files
+load_alias_file() {
+
+  if [[ -f "$main_zsh_aliases_file" ]]; then
+    # echo "Loading zsh main aliases file - $main_zsh_aliases_file"
+    source "$main_zsh_aliases_file"
+  else
+    echo "Could not load zsh main aliases file - $main_zsh_aliases_file"
+  fi
+}
+##############################################################

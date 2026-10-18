@@ -7,7 +7,7 @@
 
 #################################################################
 
-# from zap-zsh, repo 
+# from zap-zsh, repo
 plug "zap-zsh/supercharge"
 plug "zap-zsh/zap-prompt"
 plug "zap-zsh/sudo"
@@ -25,3 +25,4 @@ plug "MichaelAquilina/zsh-you-should-use"
 
 plug "wintermi/zsh-brew"
 
+plug "Automaat/zsh-clean-history"
