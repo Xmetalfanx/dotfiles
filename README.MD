@@ -23,7 +23,7 @@
 
 ### What to edit
 
-- Once a file is in the dotfiles location where it is supposed to be, EDIT THAT and then "stow ." (not every time, but when new configs are there... no need to do that everytime)
+- Once a file is in the dotfiles location where it is supposed to be, EDIT THAT and then "stow home" (not every time, but when new configs are there... no need to do that everytime)
 
 - ** IF you make a mistake and edit the actual files in .config/... for instance .. i think it becomes "un-stowed" and no longer backed up ...
   - IF this happens the fix is easy
