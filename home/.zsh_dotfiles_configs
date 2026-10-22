@@ -7,7 +7,7 @@ declare_variables() {
 
     dotfiles_home_dir="$HOME/dotfiles/home"
 
-    main_zsh_dir="${dotfiles_home_dir}/.configs/zsh"
+    main_zsh_dir="${dotfiles_home_dir}/.config/zsh"
 
     # for aliases
     zsh_aliases_dir="$main_zsh_dir/aliases_and_functions"

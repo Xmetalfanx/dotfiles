@@ -1,0 +1,34 @@
+
+# keybinds
+
+## scrolling related
+keybind = ctrl+up=scroll_page_lines:-4
+keybind = ctrl+down=scroll_page_lines:4
+keybind = ctrl+left=scroll_page_lines:-1
+keybind = ctrl+right=scroll_page_lines:1
+
+## create splits 
+keybind = shift+ctrl+down=new_split:down
+keybind = shift+ctrl+right=new_split:right
+
+# move splits
+# keybind = super+up=resize_split:up
+# keybind = super+down=resize_split:down
+# keybind = super+left=resize_split:left
+# keybind = super+right=resize_split:right
+
+## goto splits
+keybind = shift+up=goto_split:up
+keybind = shift+down=goto_split:down
+keybind = shift+left=goto_split:left
+keybind = shift+right=goto_split:right
+
+## close current split (with confirmation)
+keybind = ctrl+x=close_surface
+
+## adjust font sizes
+keybind = super+kp_add=increase_font_size:1
+keybind = ctrl+kp_add=increase_font_size:5
+keybind = super+kp_subtract=decrease_font_size:1
+keybind = ctrl+kp_subtract=decrease_font_size:5
+keybind = ctrl+0=reset_font_size
