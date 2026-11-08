@@ -30,3 +30,8 @@ alias file_mt="file --mime-type"
 alias file_short="file -b"
 alias file_mts="file --mime-type -b"
 
+##############################################
+# misc function
+user_prompt() {
+  read -r -p "Press [Enter] to continue "
+}
