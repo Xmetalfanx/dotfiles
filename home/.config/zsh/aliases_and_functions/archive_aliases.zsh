@@ -1,2 +1,2 @@
-alias tar_create="tar -cvf"
-alias tar_extract='tar -xvf'
+alias untar="tar -xvf"                                 # Extract tar archives
+alias targz="tar -czvf"                                # Create gzipped tar archives
