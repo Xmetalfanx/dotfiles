@@ -1,0 +1,11 @@
+alias ..="cd .."                   # Go up one directory
+alias ...="cd ../.."               # Go up two directories
+alias ....="cd ../../.."           # Go up three directories
+alias cd..="cd .."                 # For the typo-prone "cd.." instead of "cd .."
+alias ~="cd ~"                     # Jump to home directory
+alias home="cd ~"                  # Same as above, but with "home"
+alias back="cd -"                  # Go back to previous directory
+alias md="mkdir -pv"               # Create directory path recursively and print created dirs
+alias rd="rmdir"                   # Remove an empty directory
+alias tmp="cd /tmp"                # Jump to the system temporary directory
+alias desk="cd ~/Desktop"          # Jump directly to Desktop

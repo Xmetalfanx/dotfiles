@@ -35,3 +35,6 @@ alias file_mts="file --mime-type -b"
 user_prompt() {
   read -r -p "Press [Enter] to continue "
 }
+
+alias weather="curl wttr.in"                 # Show local weather
+
