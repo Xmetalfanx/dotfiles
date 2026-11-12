@@ -38,3 +38,4 @@ user_prompt() {
 
 alias weather="curl wttr.in"                 # Show local weather
 
+alias omp="oh-my-posh"
