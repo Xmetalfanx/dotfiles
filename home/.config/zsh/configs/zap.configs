@@ -9,7 +9,7 @@
 
 # from zap-zsh, repo
 plug "zap-zsh/supercharge"
-plug "zap-zsh/zap-prompt"
+# plug "zap-zsh/zap-prompt"
 plug "zap-zsh/sudo"
 plug "zap-zsh/fzf"
 plug "zap-zsh/web-search"
