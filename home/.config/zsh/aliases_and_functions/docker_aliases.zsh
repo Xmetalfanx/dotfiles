@@ -1,63 +1,70 @@
+
 alias dlogin="docker login"
 alias di="docker image"
 
-## IDEA: var wise i think it is handy to have say colons in tags.. distro with versions are obvious
-## what i mean is like debian:stable
-
-#####################################################################################
-## build and/or tests step
-
-## 1 - docker build
+# Build an image
 dbuild() {
-  docker build -t $1 .
+    local image_name="$1"
+
+    if [[ -z "$image_name" ]]; then
+        echo "Usage: dbuild image:tag"
+        return 1
+    fi
+
+    docker build -t "$image_name" .
 }
 
-# gets to an interactive docker prompt
+# Run an interactive container
 drun() {
-  docker run -it $1 /bin/bash
+    local image_name="$1"
+
+    if [[ -z "$image_name" ]]; then
+        echo "Usage: drun image:tag"
+        return 1
+    fi
+
+    docker run --rm -it "$image_name" /bin/bash
 }
 
-##
-#####################################################################################
-
-#####################################################################################
-# 2 - needs before pushing to dockerhub
-# ?? does $1 have the colon?  A: yes (at least for examples like fedora, below)
-# $2 has no colon ... say "fedora44" would be a tag, not "fedora:44"
+# Tag an image for Docker Hub
 dtag() {
-  docker tag $1 xmetal/linux:$2
+    local image_name="$1"
+    local hub_tag="${2:-${image_name//:/-}}"
+
+    if [[ -z "$image_name" ]]; then
+        echo "Usage: dtag image:tag [hub-tag]"
+        return 1
+    fi
+
+    docker image tag "$image_name" "xmetal/linux:$hub_tag"
 }
 
-# 3 - Push to dockerhub
-# may need to login first
+# Push an image to Docker Hub
 dpush() {
-  docker push xmetal/linux:$1
+    local hub_tag="${1//:/-}"
+
+    if [[ -z "$1" ]]; then
+        echo "Usage: dpush image:tag"
+        return 1
+    fi
+
+    docker push "xmetal/linux:$hub_tag"
 }
 
-##
-#####################################################################################
-
-#####################################################################################
-# only an idea for now
-# idea: only do this if dbuild fully works (testing with drun maybe)
+# Tag and push an image
 dpublish() {
-  # dbuild wouldn't be here since i want to see and TEST it first
+    local image_name="$1"
 
-  # tags
-  dtag $1 $2
+    if [[ -z "$image_name" ]]; then
+        echo "Usage: dpublish image:tag"
+        return 1
+    fi
 
-  drun $1
-
+    dtag "$image_name" || return 1
+    dpush "$image_name"
 }
 
-
-#####################################################################################
-
-#####################################################################################
-## prune/cleanup
-
+# Cleanup unused Docker resources
 dprune() {
-  docker system prune -a
+    docker system prune -a
 }
-
-#####################################################################################
