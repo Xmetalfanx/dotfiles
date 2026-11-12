@@ -1,0 +1,1 @@
+eval "$(oh-my-posh init zsh --config $HOME/dotfiles/home/.config/ohmyposh/settings.toml)"
