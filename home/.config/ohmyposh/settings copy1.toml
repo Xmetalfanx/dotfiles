@@ -1,0 +1,77 @@
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 4
+final_space = true
+
+[palette]
+  black = '#262B44'
+  grey = '#333333'
+  lightblue = '#4B95E9'
+  green = '##0B6623'
+  blue = '#3333ff'
+  turquoise = '#59C9A5'
+  orange = '#F07623'
+  lightorange = '#F3AE35'
+  lightred = '#D81E5B'
+  red = '#ff3333'
+  white = '#E0DEF4'
+
+
+[secondary_prompt]
+  template = '<p:yellow,transparent></><,p:yellow> > </><p:yellow,transparent></> '
+  foreground = 'p:black'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '<p:yellow,transparent></><,p:yellow> {{ .Folder }} </><p:yellow,transparent></> '
+  foreground = 'p:black'
+  background = 'transparent'
+
+[upgrade]
+  source = 'cdn'
+  interval = '168h'
+  auto = false
+  notice = false
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+version = 4
+final_space = true
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+
+[[blocks.segments]]
+type = "path"
+style = "plain"
+foreground = "p:white"
+background = "p:grey"
+template = "{{ .Path }} "
+max_depth = "3"
+
+[blocks.segments.options]
+style = "folder"
+
+[[blocks.segments]]
+type = "git"
+style = "plain"
+foreground = "p:yellow"
+template = "{{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }} "
+
+
+[[blocks.segments]]
+type = "path"
+style = "powerline"
+powerline_symbol = ""
+foreground = "#ffffff"
+background = "#61AFEF"
+
+[blocks.segments.options]
+style = "folder"
+
+[blocks.segments.options.mapped_locations]
+"C:\\temp" = ""
