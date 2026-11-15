@@ -13,24 +13,24 @@ lightblue = '#4B95E9'
 turquoise = '#21c7a8'
 orange = '#F07623'
 lightorange = '#F3AE35'
-offyellow = 'rgb(228, 207, 106)'
+offyellow = '#E4CF6A'
 red = '#ff3333'
-lightred = '#D81E5B'
-darkpurple = 'rgb(1, 22, 39)'
+darkpurple = '#011627'
 white = '#E0DEF4'
-lighttan = 'rgb(255, 235, 149)'
-themeprimarydark= 'p:darkblue'
-themeprimarylight= 'p:lighttan'
+lighttan = '#FFEB95'
+
+# theme
+themeprimarydark = '#262B44'
+themeprimarylight = '#FFEB95'
 
 
 [[blocks]]
 alignment = "left"
 type = "prompt"
 
-# icon of tux on linux
 [[blocks.segments]]
 background = "p:darkblue"
-foreground = "p:lighttan"
+foreground = "p:themeprimarylight"
 leading_diamond = "╭─"
 style = "diamond"
 template = " {{ if .WSL }}WSL at {{ end }}{{.Icon}}  "
@@ -40,8 +40,8 @@ type = "os"
 windows = ""
 
 [[blocks.segments]]
-background = "#ef5350"
-foreground = "p:lighttan"
+background = "p:white"
+foreground = "p:darkblue"
 powerline_symbol = ""
 style = "powerline"
 template = "  "
@@ -49,14 +49,15 @@ type = "root"
 
 # path
 [[blocks.segments]]
-background = "p:darkblue"
-foreground = "p:white"
+background = "transparent"
+foreground = "p:themeprimarylight"
 powerline_symbol = ""
 leading_powerline_symbol = ""
 style = "powerline"
-template = "{{ path .Path .Location }}"
+# template = "{{ path .AbsolutePWD .Location }}"
+template = "{{ path .PWD .Location }}"
 type = "path"
-max_depth = 5
+hide_root_location = true
 
 
 [blocks.segments.options]
@@ -64,7 +65,7 @@ folder_icon = " "
 folder_separator_icon = "<#011627></> "
 home_icon = "  "
 style = "agnoster_short"
-
+max_depth = 3
 
 
 # git related 
@@ -86,34 +87,24 @@ branch_icon = " "
 [blocks.segments.options.mapped_branches]
 
 
-
 # execution time 
-# [[blocks.segments]]
-# background = "#575656"
-# foreground = "#d6deeb"
-# leading_diamond = ""
-# style = "diamond"
-# template = " {{ .FormattedMs }}"
-# trailing_diamond = ""
-# type = "executiontime"
-# [blocks.segments.options]
-# style = "roundrock"
-# threshold = 0
+[[blocks.segments]]
+background = "#575656"
+foreground = "#d6deeb"
+leading_diamond = ""
+style = "diamond"
+template = " {{ .FormattedMs }}"
+trailing_diamond = ""
+type = "executiontime"
+[blocks.segments.options]
+style = "roundrock"
+threshold = 0
 
 
 # [[blocks]]
 # alignment = "right"
 # overflow = "break"
 # type = "prompt"
-
-# [[blocks.segments]]
-# background = "#d6deeb"
-# foreground = "#011627"
-# leading_diamond = ""
-# style = "diamond"
-# template = "  {{ .Name }} "
-# trailing_diamond = ""
-# type = "shell"
 
 # [[blocks.segments]]
 # background = "#8f43f3"
@@ -136,15 +127,6 @@ style = "plain"
 template = "╰─"
 type = "text"
 
-[[blocks.segments]]
-background = "#1DB954"
-foreground = "#011627"
-leading_diamond = ""
-style = "diamond"
-template = " {{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} ~ {{ .Track }}{{ end }} "
-trailing_diamond = " "
-type = "spotify"
-
 [blocks.segments.options]
 playing_icon = " "
 
@@ -160,5 +142,5 @@ always_enabled = true
 
 [transient_prompt]
 background = "transparent"
-foreground = "#d6deeb"
+foreground = "p:themeprimarylight"
 template = " "
