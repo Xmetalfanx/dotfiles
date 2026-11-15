@@ -2,7 +2,6 @@
 
 format = """
 [ ](fg:neon_green)\
-$username\
 [ >](bg:bg_dark fg:neon_green)\
 $directory\
 [](bg:bg_dark fg:neon_green)\
@@ -84,3 +83,15 @@ red             = "#d20f39"
 orange          = "#fe640b"
 orange_yellow   = "#df8e1d"
 yellow          = "#FFEA00"
+
+
+[profiles]
+transient="""
+$character\
+"""
+
+rtransient="""
+$status\
+$cmd_duration\
+$time\
+"""
