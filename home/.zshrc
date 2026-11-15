@@ -13,10 +13,8 @@ load_configs "Zap zsh Plugin Manager configs" "zap" "home"
 load_configs "Homebrew" "homebrew" "home"
 load_configs "Atuin" "atuin" "root"
 load_configs "Fix for bat command problem," "bat_problem_fix"
-load_configs "Halloy" "halloy"
-load_configs "Oh My Posh" "ohmyposh"
+# load_configs "Halloy" "halloy"
 load_configs "PNPM" "pnpm"
-# load_configs "Starship" "starship"
 load_configs "Intelli-shell" "intelli_shell"
 load_configs "Zoxide" "zoxide"
 load_configs "Homebrew" "homebrew"
@@ -29,5 +27,8 @@ load_configs "Vite" "vite"
 # note: this is not 100% needed for nix to work, it seems
 load_configs "Nix Package Manager" "nix"
 
-##################################################################
+# customize prompt
+# load_configs "Oh My Posh" "ohmyposh"
+load_configs "Starship" "starship"
 
+##################################################################
