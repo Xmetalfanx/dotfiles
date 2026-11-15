@@ -46,7 +46,6 @@ atd_delete() {
   atd_duration 'atuin search'
 
   sleep 2
-  clear
 
   # ath dedup --dry-run --before "${duration}" --dupkeep 1
   ath dedup --before "${duration}" --dupkeep 1
